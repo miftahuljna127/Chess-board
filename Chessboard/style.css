@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-dark: #862613;
+  --clr-bright: #d5804b;
+}
+
+body {
+  background-color: #d4d4d4;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px;
+  color: var(--clr-dark);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 800px;
+  border: 10px solid #090012;
+}
+
+.row {
+  display: flex;
+}
+
+.board {
+  flex-basis: 20%;
+  height: 120px;
+}
+
+.row:nth-child(odd) .board:nth-child(odd),
+.row:nth-child(even) .board:nth-child(even) {
+  background-color: var(--clr-dark);
+}
+
+.row:nth-child(odd) .board:nth-child(even),
+.row:nth-child(even) .board:nth-child(odd) {
+  background-color: var(--clr-bright);
+}
